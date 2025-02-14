@@ -42,6 +42,16 @@ public class MovimientoPelota : MonoBehaviour
         {
             vertical *= -1;
         }
+        if (collision.gameObject.tag == "Wall")
+        {
+            vertical *= -1;
+            horizontal *= -1;
+        }
+        if (collision.gameObject.tag == "Pala")
+        {
+            vertical *= -1;
+            horizontal *= -1;
+        }
         if (collision.gameObject.tag == "Muerte")
         {
             if (manager.puntB >= 1)
