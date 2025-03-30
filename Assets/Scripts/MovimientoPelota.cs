@@ -45,12 +45,12 @@ public class MovimientoPelota : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             vertical *= -1;
-            horizontal *= -1;
+            manager.puntA++;
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Pala")
         {
             vertical *= -1;
-            horizontal *= -1;
         }
         if (collision.gameObject.tag == "Muerte")
         {
@@ -61,6 +61,7 @@ public class MovimientoPelota : MonoBehaviour
             }
         }
     }
+
     void Spawn()
     {
         transform.position = new Vector3(0, -2, 0);

@@ -17,5 +17,9 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("MenuPrincipal");
         }
+        else if (puntA >= 50)
+        {
+            SceneManager.LoadScene("MenuPrincipal");
+        }
     }
 }
